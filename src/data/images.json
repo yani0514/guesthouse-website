@@ -1,0 +1,918 @@
+[
+  {
+    "id": "house-summer-balconies",
+    "source": "749879147_4066008083696409_8458191662878149933_n.jpg",
+    "category": "house",
+    "width": 2048,
+    "height": 1536,
+    "alt": {
+      "bg": "Къщата с дървени балкони, каменна пътека и висящ стол",
+      "en": "The house with wooden balconies, a stone path and a hanging chair"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/house/house-summer-balconies-480.avif",
+        "webp": "/images/house/house-summer-balconies-480.webp",
+        "jpeg": "/images/house/house-summer-balconies-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/house/house-summer-balconies-768.avif",
+        "webp": "/images/house/house-summer-balconies-768.webp",
+        "jpeg": "/images/house/house-summer-balconies-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/house/house-summer-balconies-960.avif",
+        "webp": "/images/house/house-summer-balconies-960.webp",
+        "jpeg": "/images/house/house-summer-balconies-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/house/house-summer-balconies-1600.avif",
+        "webp": "/images/house/house-summer-balconies-1600.webp",
+        "jpeg": "/images/house/house-summer-balconies-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/house/house-summer-balconies-2048.avif",
+        "webp": "/images/house/house-summer-balconies-2048.webp",
+        "jpeg": "/images/house/house-summer-balconies-2048.jpg"
+      }
+    ]
+  },
+  {
+    "id": "pool-sun-loungers",
+    "source": "749286981_4066007660363118_2032586854772737902_n.jpg",
+    "category": "garden",
+    "width": 2048,
+    "height": 1536,
+    "alt": {
+      "bg": "Външният надземен басейн с шезлонги и чадъри",
+      "en": "The outdoor above-ground swimming pool with sun loungers and parasols"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/garden/pool-sun-loungers-480.avif",
+        "webp": "/images/garden/pool-sun-loungers-480.webp",
+        "jpeg": "/images/garden/pool-sun-loungers-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/garden/pool-sun-loungers-768.avif",
+        "webp": "/images/garden/pool-sun-loungers-768.webp",
+        "jpeg": "/images/garden/pool-sun-loungers-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/garden/pool-sun-loungers-960.avif",
+        "webp": "/images/garden/pool-sun-loungers-960.webp",
+        "jpeg": "/images/garden/pool-sun-loungers-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/garden/pool-sun-loungers-1600.avif",
+        "webp": "/images/garden/pool-sun-loungers-1600.webp",
+        "jpeg": "/images/garden/pool-sun-loungers-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/garden/pool-sun-loungers-2048.avif",
+        "webp": "/images/garden/pool-sun-loungers-2048.webp",
+        "jpeg": "/images/garden/pool-sun-loungers-2048.jpg"
+      }
+    ]
+  },
+  {
+    "id": "mehana-brick-barbecue",
+    "source": "484869781_625541843647064_7296610377577046951_n.jpg",
+    "category": "mehana",
+    "width": 2048,
+    "height": 1542,
+    "alt": {
+      "bg": "Механата с дървени маси и зидано барбекю",
+      "en": "The traditional mehana with wooden tables and a brick barbecue"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/mehana/mehana-brick-barbecue-480.avif",
+        "webp": "/images/mehana/mehana-brick-barbecue-480.webp",
+        "jpeg": "/images/mehana/mehana-brick-barbecue-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/mehana/mehana-brick-barbecue-768.avif",
+        "webp": "/images/mehana/mehana-brick-barbecue-768.webp",
+        "jpeg": "/images/mehana/mehana-brick-barbecue-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/mehana/mehana-brick-barbecue-960.avif",
+        "webp": "/images/mehana/mehana-brick-barbecue-960.webp",
+        "jpeg": "/images/mehana/mehana-brick-barbecue-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/mehana/mehana-brick-barbecue-1600.avif",
+        "webp": "/images/mehana/mehana-brick-barbecue-1600.webp",
+        "jpeg": "/images/mehana/mehana-brick-barbecue-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/mehana/mehana-brick-barbecue-2048.avif",
+        "webp": "/images/mehana/mehana-brick-barbecue-2048.webp",
+        "jpeg": "/images/mehana/mehana-brick-barbecue-2048.jpg"
+      }
+    ]
+  },
+  {
+    "id": "garden-banana-trees",
+    "source": "751549883_4066008200363064_377320836622796817_n.jpg",
+    "category": "garden",
+    "width": 2048,
+    "height": 1536,
+    "alt": {
+      "bg": "Бананови дървета покрай каменната пътека в градината",
+      "en": "Banana trees beside the stone path in the garden"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/garden/garden-banana-trees-480.avif",
+        "webp": "/images/garden/garden-banana-trees-480.webp",
+        "jpeg": "/images/garden/garden-banana-trees-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/garden/garden-banana-trees-768.avif",
+        "webp": "/images/garden/garden-banana-trees-768.webp",
+        "jpeg": "/images/garden/garden-banana-trees-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/garden/garden-banana-trees-960.avif",
+        "webp": "/images/garden/garden-banana-trees-960.webp",
+        "jpeg": "/images/garden/garden-banana-trees-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/garden/garden-banana-trees-1600.avif",
+        "webp": "/images/garden/garden-banana-trees-1600.webp",
+        "jpeg": "/images/garden/garden-banana-trees-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/garden/garden-banana-trees-2048.avif",
+        "webp": "/images/garden/garden-banana-trees-2048.webp",
+        "jpeg": "/images/garden/garden-banana-trees-2048.jpg"
+      }
+    ]
+  },
+  {
+    "id": "terrace-parasols",
+    "source": "518965703_719269500940964_2684005217128000622_n.jpg",
+    "category": "amenities",
+    "width": 2048,
+    "height": 1542,
+    "alt": {
+      "bg": "Обзаведена тераса с чадъри, шезлонги и дървени маси",
+      "en": "Furnished terrace with parasols, sun loungers and wooden tables"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/amenities/terrace-parasols-480.avif",
+        "webp": "/images/amenities/terrace-parasols-480.webp",
+        "jpeg": "/images/amenities/terrace-parasols-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/amenities/terrace-parasols-768.avif",
+        "webp": "/images/amenities/terrace-parasols-768.webp",
+        "jpeg": "/images/amenities/terrace-parasols-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/amenities/terrace-parasols-960.avif",
+        "webp": "/images/amenities/terrace-parasols-960.webp",
+        "jpeg": "/images/amenities/terrace-parasols-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/amenities/terrace-parasols-1600.avif",
+        "webp": "/images/amenities/terrace-parasols-1600.webp",
+        "jpeg": "/images/amenities/terrace-parasols-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/amenities/terrace-parasols-2048.avif",
+        "webp": "/images/amenities/terrace-parasols-2048.webp",
+        "jpeg": "/images/amenities/terrace-parasols-2048.jpg"
+      }
+    ]
+  },
+  {
+    "id": "bedroom-double-sofa",
+    "source": "484869484_625542066980375_4221876088234509443_n.jpg",
+    "category": "rooms",
+    "width": 2048,
+    "height": 1542,
+    "alt": {
+      "bg": "Стая с двойно легло, диван и ниска маса",
+      "en": "A bedroom with a double bed, sofa and coffee table"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/rooms/bedroom-double-sofa-480.avif",
+        "webp": "/images/rooms/bedroom-double-sofa-480.webp",
+        "jpeg": "/images/rooms/bedroom-double-sofa-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/rooms/bedroom-double-sofa-768.avif",
+        "webp": "/images/rooms/bedroom-double-sofa-768.webp",
+        "jpeg": "/images/rooms/bedroom-double-sofa-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/rooms/bedroom-double-sofa-960.avif",
+        "webp": "/images/rooms/bedroom-double-sofa-960.webp",
+        "jpeg": "/images/rooms/bedroom-double-sofa-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/rooms/bedroom-double-sofa-1600.avif",
+        "webp": "/images/rooms/bedroom-double-sofa-1600.webp",
+        "jpeg": "/images/rooms/bedroom-double-sofa-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/rooms/bedroom-double-sofa-2048.avif",
+        "webp": "/images/rooms/bedroom-double-sofa-2048.webp",
+        "jpeg": "/images/rooms/bedroom-double-sofa-2048.jpg"
+      }
+    ]
+  },
+  {
+    "id": "bedroom-twin-beds",
+    "source": "484891426_627052376829344_2582457656491121925_n.jpg",
+    "category": "rooms",
+    "width": 2048,
+    "height": 1542,
+    "alt": {
+      "bg": "Стая с две единични легла и тъмни завеси",
+      "en": "A bedroom with two single beds and dark curtains"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/rooms/bedroom-twin-beds-480.avif",
+        "webp": "/images/rooms/bedroom-twin-beds-480.webp",
+        "jpeg": "/images/rooms/bedroom-twin-beds-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/rooms/bedroom-twin-beds-768.avif",
+        "webp": "/images/rooms/bedroom-twin-beds-768.webp",
+        "jpeg": "/images/rooms/bedroom-twin-beds-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/rooms/bedroom-twin-beds-960.avif",
+        "webp": "/images/rooms/bedroom-twin-beds-960.webp",
+        "jpeg": "/images/rooms/bedroom-twin-beds-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/rooms/bedroom-twin-beds-1600.avif",
+        "webp": "/images/rooms/bedroom-twin-beds-1600.webp",
+        "jpeg": "/images/rooms/bedroom-twin-beds-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/rooms/bedroom-twin-beds-2048.avif",
+        "webp": "/images/rooms/bedroom-twin-beds-2048.webp",
+        "jpeg": "/images/rooms/bedroom-twin-beds-2048.jpg"
+      }
+    ]
+  },
+  {
+    "id": "bathroom-shower",
+    "source": "484871693_625541983647050_458757920538059765_n.jpg",
+    "category": "amenities",
+    "width": 1542,
+    "height": 2048,
+    "alt": {
+      "bg": "Душ с мозаечни плочки в банята",
+      "en": "A shower with mosaic tiles in a bathroom"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/amenities/bathroom-shower-480.avif",
+        "webp": "/images/amenities/bathroom-shower-480.webp",
+        "jpeg": "/images/amenities/bathroom-shower-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/amenities/bathroom-shower-768.avif",
+        "webp": "/images/amenities/bathroom-shower-768.webp",
+        "jpeg": "/images/amenities/bathroom-shower-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/amenities/bathroom-shower-960.avif",
+        "webp": "/images/amenities/bathroom-shower-960.webp",
+        "jpeg": "/images/amenities/bathroom-shower-960.jpg"
+      },
+      {
+        "width": 1542,
+        "avif": "/images/amenities/bathroom-shower-1542.avif",
+        "webp": "/images/amenities/bathroom-shower-1542.webp",
+        "jpeg": "/images/amenities/bathroom-shower-1542.jpg"
+      }
+    ]
+  },
+  {
+    "id": "mehana-dining-benches",
+    "source": "484870409_625541850313730_5042468580984293832_n.jpg",
+    "category": "mehana",
+    "width": 2048,
+    "height": 1542,
+    "alt": {
+      "bg": "Механата с маси, дървени пейки и телевизор",
+      "en": "The mehana with dining tables, wooden benches and a television"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/mehana/mehana-dining-benches-480.avif",
+        "webp": "/images/mehana/mehana-dining-benches-480.webp",
+        "jpeg": "/images/mehana/mehana-dining-benches-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/mehana/mehana-dining-benches-768.avif",
+        "webp": "/images/mehana/mehana-dining-benches-768.webp",
+        "jpeg": "/images/mehana/mehana-dining-benches-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/mehana/mehana-dining-benches-960.avif",
+        "webp": "/images/mehana/mehana-dining-benches-960.webp",
+        "jpeg": "/images/mehana/mehana-dining-benches-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/mehana/mehana-dining-benches-1600.avif",
+        "webp": "/images/mehana/mehana-dining-benches-1600.webp",
+        "jpeg": "/images/mehana/mehana-dining-benches-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/mehana/mehana-dining-benches-2048.avif",
+        "webp": "/images/mehana/mehana-dining-benches-2048.webp",
+        "jpeg": "/images/mehana/mehana-dining-benches-2048.jpg"
+      }
+    ]
+  },
+  {
+    "id": "kitchen-wood-cabinets",
+    "source": "484900162_625541856980396_4102115266149445498_n.jpg",
+    "category": "amenities",
+    "width": 1542,
+    "height": 2048,
+    "alt": {
+      "bg": "Кухня с дървени шкафове, мивка и работен плот",
+      "en": "A kitchen with wooden cabinets, sink and worktop"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/amenities/kitchen-wood-cabinets-480.avif",
+        "webp": "/images/amenities/kitchen-wood-cabinets-480.webp",
+        "jpeg": "/images/amenities/kitchen-wood-cabinets-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/amenities/kitchen-wood-cabinets-768.avif",
+        "webp": "/images/amenities/kitchen-wood-cabinets-768.webp",
+        "jpeg": "/images/amenities/kitchen-wood-cabinets-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/amenities/kitchen-wood-cabinets-960.avif",
+        "webp": "/images/amenities/kitchen-wood-cabinets-960.webp",
+        "jpeg": "/images/amenities/kitchen-wood-cabinets-960.jpg"
+      },
+      {
+        "width": 1542,
+        "avif": "/images/amenities/kitchen-wood-cabinets-1542.avif",
+        "webp": "/images/amenities/kitchen-wood-cabinets-1542.webp",
+        "jpeg": "/images/amenities/kitchen-wood-cabinets-1542.jpg"
+      }
+    ]
+  },
+  {
+    "id": "house-entrance-swing",
+    "source": "484902845_625541980313717_3806322905562119736_n.jpg",
+    "category": "house",
+    "width": 1542,
+    "height": 2048,
+    "alt": {
+      "bg": "Входът на къщата с дървени парапети и висящ стол",
+      "en": "The house entrance with wooden railings and a hanging chair"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/house/house-entrance-swing-480.avif",
+        "webp": "/images/house/house-entrance-swing-480.webp",
+        "jpeg": "/images/house/house-entrance-swing-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/house/house-entrance-swing-768.avif",
+        "webp": "/images/house/house-entrance-swing-768.webp",
+        "jpeg": "/images/house/house-entrance-swing-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/house/house-entrance-swing-960.avif",
+        "webp": "/images/house/house-entrance-swing-960.webp",
+        "jpeg": "/images/house/house-entrance-swing-960.jpg"
+      },
+      {
+        "width": 1542,
+        "avif": "/images/house/house-entrance-swing-1542.avif",
+        "webp": "/images/house/house-entrance-swing-1542.webp",
+        "jpeg": "/images/house/house-entrance-swing-1542.jpg"
+      }
+    ]
+  },
+  {
+    "id": "terrace-loungers",
+    "source": "484903250_625542080313707_3720704463386618100_n.jpg",
+    "category": "amenities",
+    "width": 2048,
+    "height": 1542,
+    "alt": {
+      "bg": "Редица шезлонги на каменната тераса",
+      "en": "A row of sun loungers on the stone terrace"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/amenities/terrace-loungers-480.avif",
+        "webp": "/images/amenities/terrace-loungers-480.webp",
+        "jpeg": "/images/amenities/terrace-loungers-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/amenities/terrace-loungers-768.avif",
+        "webp": "/images/amenities/terrace-loungers-768.webp",
+        "jpeg": "/images/amenities/terrace-loungers-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/amenities/terrace-loungers-960.avif",
+        "webp": "/images/amenities/terrace-loungers-960.webp",
+        "jpeg": "/images/amenities/terrace-loungers-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/amenities/terrace-loungers-1600.avif",
+        "webp": "/images/amenities/terrace-loungers-1600.webp",
+        "jpeg": "/images/amenities/terrace-loungers-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/amenities/terrace-loungers-2048.avif",
+        "webp": "/images/amenities/terrace-loungers-2048.webp",
+        "jpeg": "/images/amenities/terrace-loungers-2048.jpg"
+      }
+    ]
+  },
+  {
+    "id": "bedroom-double-tv",
+    "source": "484904995_625541820313733_8123442358617540843_n.jpg",
+    "category": "rooms",
+    "width": 2048,
+    "height": 1542,
+    "alt": {
+      "bg": "Стая с двойно легло, гардероб и телевизор",
+      "en": "A bedroom with a double bed, wardrobe and television"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/rooms/bedroom-double-tv-480.avif",
+        "webp": "/images/rooms/bedroom-double-tv-480.webp",
+        "jpeg": "/images/rooms/bedroom-double-tv-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/rooms/bedroom-double-tv-768.avif",
+        "webp": "/images/rooms/bedroom-double-tv-768.webp",
+        "jpeg": "/images/rooms/bedroom-double-tv-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/rooms/bedroom-double-tv-960.avif",
+        "webp": "/images/rooms/bedroom-double-tv-960.webp",
+        "jpeg": "/images/rooms/bedroom-double-tv-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/rooms/bedroom-double-tv-1600.avif",
+        "webp": "/images/rooms/bedroom-double-tv-1600.webp",
+        "jpeg": "/images/rooms/bedroom-double-tv-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/rooms/bedroom-double-tv-2048.avif",
+        "webp": "/images/rooms/bedroom-double-tv-2048.webp",
+        "jpeg": "/images/rooms/bedroom-double-tv-2048.jpg"
+      }
+    ]
+  },
+  {
+    "id": "bedroom-single-double",
+    "source": "484905904_625542063647042_4810328330486970896_n.jpg",
+    "category": "rooms",
+    "width": 2048,
+    "height": 1542,
+    "alt": {
+      "bg": "Стая с единично и двойно легло",
+      "en": "A bedroom with a single bed and a double bed"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/rooms/bedroom-single-double-480.avif",
+        "webp": "/images/rooms/bedroom-single-double-480.webp",
+        "jpeg": "/images/rooms/bedroom-single-double-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/rooms/bedroom-single-double-768.avif",
+        "webp": "/images/rooms/bedroom-single-double-768.webp",
+        "jpeg": "/images/rooms/bedroom-single-double-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/rooms/bedroom-single-double-960.avif",
+        "webp": "/images/rooms/bedroom-single-double-960.webp",
+        "jpeg": "/images/rooms/bedroom-single-double-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/rooms/bedroom-single-double-1600.avif",
+        "webp": "/images/rooms/bedroom-single-double-1600.webp",
+        "jpeg": "/images/rooms/bedroom-single-double-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/rooms/bedroom-single-double-2048.avif",
+        "webp": "/images/rooms/bedroom-single-double-2048.webp",
+        "jpeg": "/images/rooms/bedroom-single-double-2048.jpg"
+      }
+    ]
+  },
+  {
+    "id": "bathroom-sink-door",
+    "source": "485309092_627052373496011_6275884449629173150_n.jpg",
+    "category": "amenities",
+    "width": 1542,
+    "height": 2048,
+    "alt": {
+      "bg": "Баня с мивка, огледало и завеса за душ",
+      "en": "A bathroom with a basin, mirror and shower curtain"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/amenities/bathroom-sink-door-480.avif",
+        "webp": "/images/amenities/bathroom-sink-door-480.webp",
+        "jpeg": "/images/amenities/bathroom-sink-door-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/amenities/bathroom-sink-door-768.avif",
+        "webp": "/images/amenities/bathroom-sink-door-768.webp",
+        "jpeg": "/images/amenities/bathroom-sink-door-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/amenities/bathroom-sink-door-960.avif",
+        "webp": "/images/amenities/bathroom-sink-door-960.webp",
+        "jpeg": "/images/amenities/bathroom-sink-door-960.jpg"
+      },
+      {
+        "width": 1542,
+        "avif": "/images/amenities/bathroom-sink-door-1542.avif",
+        "webp": "/images/amenities/bathroom-sink-door-1542.webp",
+        "jpeg": "/images/amenities/bathroom-sink-door-1542.jpg"
+      }
+    ]
+  },
+  {
+    "id": "bathroom-mosaic",
+    "source": "485371886_627052380162677_636845313385005887_n.jpg",
+    "category": "amenities",
+    "width": 1542,
+    "height": 2048,
+    "alt": {
+      "bg": "Баня с мозаечни плочки, тоалетна и мивка",
+      "en": "A mosaic-tiled bathroom with a toilet and basin"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/amenities/bathroom-mosaic-480.avif",
+        "webp": "/images/amenities/bathroom-mosaic-480.webp",
+        "jpeg": "/images/amenities/bathroom-mosaic-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/amenities/bathroom-mosaic-768.avif",
+        "webp": "/images/amenities/bathroom-mosaic-768.webp",
+        "jpeg": "/images/amenities/bathroom-mosaic-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/amenities/bathroom-mosaic-960.avif",
+        "webp": "/images/amenities/bathroom-mosaic-960.webp",
+        "jpeg": "/images/amenities/bathroom-mosaic-960.jpg"
+      },
+      {
+        "width": 1542,
+        "avif": "/images/amenities/bathroom-mosaic-1542.avif",
+        "webp": "/images/amenities/bathroom-mosaic-1542.webp",
+        "jpeg": "/images/amenities/bathroom-mosaic-1542.jpg"
+      }
+    ]
+  },
+  {
+    "id": "bedroom-three-places",
+    "source": "485662267_627052383496010_8182654219337006144_n.jpg",
+    "category": "rooms",
+    "width": 2048,
+    "height": 1542,
+    "alt": {
+      "bg": "Стая с двойно и единично легло до прозореца",
+      "en": "A bedroom with a double and a single bed beside the window"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/rooms/bedroom-three-places-480.avif",
+        "webp": "/images/rooms/bedroom-three-places-480.webp",
+        "jpeg": "/images/rooms/bedroom-three-places-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/rooms/bedroom-three-places-768.avif",
+        "webp": "/images/rooms/bedroom-three-places-768.webp",
+        "jpeg": "/images/rooms/bedroom-three-places-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/rooms/bedroom-three-places-960.avif",
+        "webp": "/images/rooms/bedroom-three-places-960.webp",
+        "jpeg": "/images/rooms/bedroom-three-places-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/rooms/bedroom-three-places-1600.avif",
+        "webp": "/images/rooms/bedroom-three-places-1600.webp",
+        "jpeg": "/images/rooms/bedroom-three-places-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/rooms/bedroom-three-places-2048.avif",
+        "webp": "/images/rooms/bedroom-three-places-2048.webp",
+        "jpeg": "/images/rooms/bedroom-three-places-2048.jpg"
+      }
+    ]
+  },
+  {
+    "id": "bedroom-wardrobe-tv",
+    "source": "485726724_627052536829328_5435050476710038523_n.jpg",
+    "category": "rooms",
+    "width": 2048,
+    "height": 1542,
+    "alt": {
+      "bg": "Детайл от стая с гардероб и телевизор",
+      "en": "A bedroom detail with a wardrobe and television"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/rooms/bedroom-wardrobe-tv-480.avif",
+        "webp": "/images/rooms/bedroom-wardrobe-tv-480.webp",
+        "jpeg": "/images/rooms/bedroom-wardrobe-tv-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/rooms/bedroom-wardrobe-tv-768.avif",
+        "webp": "/images/rooms/bedroom-wardrobe-tv-768.webp",
+        "jpeg": "/images/rooms/bedroom-wardrobe-tv-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/rooms/bedroom-wardrobe-tv-960.avif",
+        "webp": "/images/rooms/bedroom-wardrobe-tv-960.webp",
+        "jpeg": "/images/rooms/bedroom-wardrobe-tv-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/rooms/bedroom-wardrobe-tv-1600.avif",
+        "webp": "/images/rooms/bedroom-wardrobe-tv-1600.webp",
+        "jpeg": "/images/rooms/bedroom-wardrobe-tv-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/rooms/bedroom-wardrobe-tv-2048.avif",
+        "webp": "/images/rooms/bedroom-wardrobe-tv-2048.webp",
+        "jpeg": "/images/rooms/bedroom-wardrobe-tv-2048.jpg"
+      }
+    ]
+  },
+  {
+    "id": "house-wooden-terraces",
+    "source": "519536076_719269454274302_4662850692263622467_n.jpg",
+    "category": "house",
+    "width": 2048,
+    "height": 1542,
+    "alt": {
+      "bg": "Фасадата на къщата с дървени тераси и чадъри",
+      "en": "The house facade with wooden terraces and parasols"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/house/house-wooden-terraces-480.avif",
+        "webp": "/images/house/house-wooden-terraces-480.webp",
+        "jpeg": "/images/house/house-wooden-terraces-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/house/house-wooden-terraces-768.avif",
+        "webp": "/images/house/house-wooden-terraces-768.webp",
+        "jpeg": "/images/house/house-wooden-terraces-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/house/house-wooden-terraces-960.avif",
+        "webp": "/images/house/house-wooden-terraces-960.webp",
+        "jpeg": "/images/house/house-wooden-terraces-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/house/house-wooden-terraces-1600.avif",
+        "webp": "/images/house/house-wooden-terraces-1600.webp",
+        "jpeg": "/images/house/house-wooden-terraces-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/house/house-wooden-terraces-2048.avif",
+        "webp": "/images/house/house-wooden-terraces-2048.webp",
+        "jpeg": "/images/house/house-wooden-terraces-2048.jpg"
+      }
+    ]
+  },
+  {
+    "id": "garden-pool-trampoline",
+    "source": "749286956_4066007903696427_1214643431045601325_n.jpg",
+    "category": "garden",
+    "width": 2048,
+    "height": 1536,
+    "alt": {
+      "bg": "Дворът с надземен басейн, батут и шезлонги",
+      "en": "The garden with an above-ground pool, trampoline and sun loungers"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/garden/garden-pool-trampoline-480.avif",
+        "webp": "/images/garden/garden-pool-trampoline-480.webp",
+        "jpeg": "/images/garden/garden-pool-trampoline-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/garden/garden-pool-trampoline-768.avif",
+        "webp": "/images/garden/garden-pool-trampoline-768.webp",
+        "jpeg": "/images/garden/garden-pool-trampoline-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/garden/garden-pool-trampoline-960.avif",
+        "webp": "/images/garden/garden-pool-trampoline-960.webp",
+        "jpeg": "/images/garden/garden-pool-trampoline-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/garden/garden-pool-trampoline-1600.avif",
+        "webp": "/images/garden/garden-pool-trampoline-1600.webp",
+        "jpeg": "/images/garden/garden-pool-trampoline-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/garden/garden-pool-trampoline-2048.avif",
+        "webp": "/images/garden/garden-pool-trampoline-2048.webp",
+        "jpeg": "/images/garden/garden-pool-trampoline-2048.jpg"
+      }
+    ]
+  },
+  {
+    "id": "garden-roses-swing",
+    "source": "750216810_4066008940362990_1714535642581054020_n.jpg",
+    "category": "garden",
+    "width": 2048,
+    "height": 1536,
+    "alt": {
+      "bg": "Каменна пътека, рози и висящ стол в двора",
+      "en": "A stone path, roses and hanging chair in the garden"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/garden/garden-roses-swing-480.avif",
+        "webp": "/images/garden/garden-roses-swing-480.webp",
+        "jpeg": "/images/garden/garden-roses-swing-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/garden/garden-roses-swing-768.avif",
+        "webp": "/images/garden/garden-roses-swing-768.webp",
+        "jpeg": "/images/garden/garden-roses-swing-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/garden/garden-roses-swing-960.avif",
+        "webp": "/images/garden/garden-roses-swing-960.webp",
+        "jpeg": "/images/garden/garden-roses-swing-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/garden/garden-roses-swing-1600.avif",
+        "webp": "/images/garden/garden-roses-swing-1600.webp",
+        "jpeg": "/images/garden/garden-roses-swing-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/garden/garden-roses-swing-2048.avif",
+        "webp": "/images/garden/garden-roses-swing-2048.webp",
+        "jpeg": "/images/garden/garden-roses-swing-2048.jpg"
+      }
+    ]
+  },
+  {
+    "id": "terrace-garden-view",
+    "source": "751485665_4066009103696307_1419833135043681017_n.jpg",
+    "category": "amenities",
+    "width": 2048,
+    "height": 1536,
+    "alt": {
+      "bg": "Поглед към терасата с шезлонги и бананови листа",
+      "en": "A view of the terrace with sun loungers and banana leaves"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/images/amenities/terrace-garden-view-480.avif",
+        "webp": "/images/amenities/terrace-garden-view-480.webp",
+        "jpeg": "/images/amenities/terrace-garden-view-480.jpg"
+      },
+      {
+        "width": 768,
+        "avif": "/images/amenities/terrace-garden-view-768.avif",
+        "webp": "/images/amenities/terrace-garden-view-768.webp",
+        "jpeg": "/images/amenities/terrace-garden-view-768.jpg"
+      },
+      {
+        "width": 960,
+        "avif": "/images/amenities/terrace-garden-view-960.avif",
+        "webp": "/images/amenities/terrace-garden-view-960.webp",
+        "jpeg": "/images/amenities/terrace-garden-view-960.jpg"
+      },
+      {
+        "width": 1600,
+        "avif": "/images/amenities/terrace-garden-view-1600.avif",
+        "webp": "/images/amenities/terrace-garden-view-1600.webp",
+        "jpeg": "/images/amenities/terrace-garden-view-1600.jpg"
+      },
+      {
+        "width": 2048,
+        "avif": "/images/amenities/terrace-garden-view-2048.avif",
+        "webp": "/images/amenities/terrace-garden-view-2048.webp",
+        "jpeg": "/images/amenities/terrace-garden-view-2048.jpg"
+      }
+    ]
+  }
+]

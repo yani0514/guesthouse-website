@@ -1,0 +1,54 @@
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+coverage/
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# OpenAI Sites
+.openai/
+
+# Temporary prerendering files
+.prerender/
+
+# Original photos and archives
+assets-source/
+*.zip
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# TypeScript build cache
+*.tsbuildinfo
+
+# Generated photo contact sheets
+docs/contact-sheet-*.jpg
+
+# Generated screenshots
+docs/screenshots/
+
+# Generated Lighthouse reports
+docs/audits/lighthouse-*.html
+docs/audits/lighthouse-summary.json
+
+# Playwright generated files
+playwright-report/
+test-results/
+playwright/.cache/
