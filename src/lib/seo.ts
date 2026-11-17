@@ -2,24 +2,28 @@ import { property } from '../data/property';
 import bg from '../locales/bg.json';
 import en from '../locales/en.json';
 import type { Language } from '../types/property';
+import { canonicalUrl } from './urls';
+import { contactLinks } from './contact';
 
 export function getSeo(language: Language) {
   const text = language === 'bg' ? bg.seo : en.seo;
-  const origin = property.siteUrl?.replace(/\/$/, '');
+  const origin = canonicalUrl().replace(/\/$/, '');
+  const contact = contactLinks(property.contact);
   return {
     ...text,
-    url: origin ? `${origin}/${language}/` : undefined,
+    url: canonicalUrl(`${language}/`),
     origin,
-    image: origin ? `${origin}/social.jpg` : '/social.jpg',
+    image: canonicalUrl('social.jpg'),
     locale: language === 'bg' ? 'bg_BG' : 'en_GB',
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'LodgingBusiness',
       name: language === 'bg' ? property.fullNameBg : property.fullNameEn,
       description: text.description,
-      ...(origin ? { url: `${origin}/${language}/`, image: `${origin}/social.jpg` } : {}),
-      ...(property.contact.phone ? { telephone: property.contact.phone } : {}),
-      ...(property.contact.email ? { email: property.contact.email } : {}),
+      url: canonicalUrl(`${language}/`),
+      image: canonicalUrl('social.jpg'),
+      ...(contact.phone ? { telephone: contact.phone } : {}),
+      ...(contact.email ? { email: contact.email } : {}),
     },
   };
 }

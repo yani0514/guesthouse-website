@@ -2,12 +2,13 @@ import { ArrowUpRight, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { property } from '../../data/property';
 import { LeafMark } from '../ui/Brand';
+import { contactLinks } from '../../lib/contact';
 
 export function Contact() {
   const { t } = useTranslation();
   const { contact, location } = property;
-  const phone = contact.phone || contact.viber;
-  const hasContact = Boolean(contact.phone || contact.email || contact.viber || contact.facebook);
+  const links = contactLinks(contact, location.mapsDestination);
+  const hasContact = Boolean(links.tel || links.mailto || links.viber || links.facebook);
   return (
     <section
       id="contact"
@@ -23,36 +24,36 @@ export function Contact() {
         <p className="contact-intro">{t('contact.description')}</p>
         {!hasContact && <p className="contact-pending">{t('contact.pending')}</p>}
         <div className="contact-actions">
-          {phone && (
+          {links.tel && (
             <a
-              href={`tel:${phone.replace(/\s/g, '')}`}
+              href={links.tel}
               className="contact-action"
             >
               <Phone />
               <span>
                 <small>{t('contact.phone')}</small>
-                <strong>{phone}</strong>
+                <strong>{links.phone}</strong>
               </span>
               <ArrowUpRight />
             </a>
           )}
-          {contact.email && (
+          {links.mailto && (
             <a
-              href={`mailto:${contact.email}`}
+              href={links.mailto}
               className="contact-action"
             >
               <Mail />
               <span>
                 <small>{t('contact.email')}</small>
-                <strong>{contact.email}</strong>
+                <strong>{links.email}</strong>
               </span>
               <ArrowUpRight />
             </a>
           )}
-          {contact.viber && (
+          {links.viber && (
             <div>
               <a
-                href={`viber://chat?number=${encodeURIComponent(contact.viber.replace(/\s/g, ''))}`}
+                href={links.viber}
                 className="text-link"
               >
                 <MessageCircle size={20} />
@@ -62,9 +63,9 @@ export function Contact() {
               <p className="small-note">{t('contact.viberHint')}</p>
             </div>
           )}
-          {contact.facebook && (
+          {links.facebook && (
             <a
-              href={contact.facebook}
+              href={links.facebook}
               className="text-link"
               target="_blank"
               rel="noopener noreferrer"
@@ -81,12 +82,12 @@ export function Contact() {
         <h3>{t('contact.locationTitle')}</h3>
         <p className="location-text">{t('common.location')}</p>
         {location.address ? <p>{location.address}</p> : <p>{t('contact.locationNote')}</p>}
-        {location.mapsDestination && (
+        {links.maps && (
           <a
             className="text-link"
             target="_blank"
             rel="noopener noreferrer"
-            href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(location.mapsDestination)}`}
+            href={links.maps}
           >
             {t('contact.directions')}
             <ArrowUpRight size={18} />

@@ -4,13 +4,14 @@
   "version": "1.0.0",
   "type": "module",
   "engines": {
-    "node": ">=22.14.0"
+    "node": ">=22.19.0"
   },
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "typecheck": "tsc -b",
     "build": "tsc -b && vite build && vite build --ssr src/entry-server.tsx --outDir .prerender && node scripts/prerender.mjs",
-    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "preview": "node scripts/serve-built.mjs",
+    "audit:performance": "node scripts/lighthouse.mjs",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

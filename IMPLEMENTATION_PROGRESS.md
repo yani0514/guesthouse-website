@@ -1,5 +1,7 @@
 # Implementation progress
 
+The first seven sections record the initial implementation. The GitHub Pages refactor below supersedes its deployment instructions and historical test/performance results.
+
 ## 1 — Repository and assets (complete)
 
 - Empty repository inspected; no existing application or AGENTS.md found.
@@ -47,3 +49,13 @@
 - Visually reviewed actual BG mobile/desktop and EN desktop screenshots. Fixed contrast, focus trapping, label/name mismatches and price typography.
 - Final retained mobile Lighthouse: BG 81/100/100/100, EN 77/100/100/100. The 90+ performance target remains unmet; evidence and limits are in `VERIFICATION_REPORT.md`.
 - README, owner-content checklist, image inventory and static deployment output completed. The final chat records actual publication status.
+
+## 8 — GitHub Pages simplification (17 November 2026)
+
+- Standard Vite base `/guesthouse-website/`, a small URL helper, and one `.github/workflows/deploy.yml`.
+- Removed temporary deployment configuration module, global declaration, environment example and generated deployment metadata; no new dependencies.
+- Retained BG/EN prerendering, all source/optimization files required by the image pipeline, original fonts and visual design.
+- Fixed public assets, language/history/hash navigation, saved-language hydration and canonical/social/sitemap/hreflang URLs.
+- Preserved the owner's previous removal of the Sites manifest from tracking; local copy and old publication untouched.
+- Expanded the original 11 tests to 19 production tests: all pass under the exact Pages prefix, with no console/network or automated accessibility failures.
+- Fresh clean install, typecheck, lint and production build passed. Detailed measurements and deployment evidence are recorded in the updated verification report.

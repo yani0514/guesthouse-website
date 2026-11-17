@@ -13,8 +13,8 @@ Before promoting the site to prospective guests, please supply:
 - Confirmation of the indicative €25–€30 per guest/night range and group discounts. No whole-house total, deposits, cancellation policy or seasonal rates are invented.
 - Guest access rules for the kitchen, pool, mehana, barbecue and other shared facilities; any seasonal pool dates and relevant house rules.
 - Whether celebrations and pets are allowed, if those policies are to be published.
-- The eventual public domain and approved public audience. The initial Sites version is private to the owner.
+- A future custom domain only if desired; the selected public hosting address is `https://yani0514.github.io/guesthouse-website/`. No additional domain decision is needed for GitHub Pages.
 
-Update `src/data/property.ts` and the BG/EN descriptions together. Empty contact fields deliberately create no links. Visitors see a short honest notice while contact details are unavailable.
+Update `src/data/property.ts` and the BG/EN descriptions together. Empty or invalid contact fields deliberately create no actionable links. Visitors see a short honest notice while contact details are unavailable.
 
 Never add waterfront access, reservoir views, walking distances, ratings, registration details or other unsupported claims.

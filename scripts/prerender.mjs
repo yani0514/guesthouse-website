@@ -7,7 +7,7 @@ const escape = (value) =>
   String(value).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
 let origin;
 for (const language of ['bg', 'en']) {
-  const { html, seo } = await render(language);
+  const { html, seo, basePath } = await render(language);
   origin = seo.origin;
   const fontSubset = language === 'bg' ? 'cyrillic' : 'latin';
   const fonts = assets.filter(
@@ -15,7 +15,7 @@ for (const language of ['bg', 'en']) {
       file.endsWith('.woff2') &&
       (file.startsWith(`lora-${fontSubset}-`) || file.startsWith(`manrope-${fontSubset}-`)),
   );
-  const meta = `${fonts.map((file) => `<link rel="preload" href="/assets/${file}" as="font" type="font/woff2" crossorigin>`).join('')}
+  const meta = `${fonts.map((file) => `<link rel="preload" href="${basePath}assets/${file}" as="font" type="font/woff2" crossorigin>`).join('')}
 <title>${escape(seo.title)}</title>
 <meta name="description" content="${escape(seo.description)}">
 <meta property="og:type" content="website">

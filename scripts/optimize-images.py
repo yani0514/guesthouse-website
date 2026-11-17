@@ -16,14 +16,12 @@ for prefix, slug, category, bg, en in records:
     with Image.open(source) as original:
         im = ImageOps.exif_transpose(original).convert('RGB')
         widths = sorted(set([w for w in (480, 768, 960, 1600, 2048) if w <= im.width] + [im.width]))
-        variants = []
         for width in widths:
             resized = im.resize((width, round(im.height * width / im.width)), Image.Resampling.LANCZOS)
             for ext in ('webp', 'jpg'):
                 resized.save(folder / f'{slug}-{width}.{ext}', quality=80 if ext == 'webp' else 84, **({'method': 6} if ext == 'webp' else {'optimize': True, 'progressive': True}))
             resized.save(folder / f'{slug}-{width}.avif', quality=52, speed=6)
-            variants.append({'width': width, 'avif': f'/images/{category}/{slug}-{width}.avif', 'webp': f'/images/{category}/{slug}-{width}.webp', 'jpeg': f'/images/{category}/{slug}-{width}.jpg'})
-        manifest.append({'id': slug, 'source': source.name, 'category': category, 'width': im.width, 'height': im.height, 'alt': {'bg': bg, 'en': en}, 'variants': variants})
+        manifest.append({'id': slug, 'source': source.name, 'category': category, 'width': im.width, 'height': im.height, 'alt': {'bg': bg, 'en': en}, 'widths': widths})
         if prefix == '749879147':
             ImageOps.fit(im, (1200,630), method=Image.Resampling.LANCZOS, centering=(0.5,0.42)).save(root / 'public/social.jpg', quality=88, optimize=True)
 (root / 'src/data').mkdir(parents=True, exist_ok=True)

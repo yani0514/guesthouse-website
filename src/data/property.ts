@@ -16,7 +16,6 @@ export const property: GuestHouseConfig = {
   nameEn: 'Bananov Rai',
   fullNameBg: 'Къща за гости „Бананов рай“',
   fullNameEn: 'Bananov Rai Guest House',
-  siteUrl: 'https://bananov-rai-tsonevo.stefanpenchev.chatgpt.site',
   location: { region: 'Varna Province', landmark: 'Tsonevo Reservoir' },
   bananaTreeCountApprox: 7,
   capacity: 19,

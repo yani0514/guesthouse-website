@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { Brand } from '../ui/Brand';
 import type { Language } from '../../types/property';
+import { languagePath } from '../../lib/urls';
 
 const sectionIds = [
   'home',
@@ -58,8 +59,9 @@ export function Header() {
   }, [open]);
 
   function changeLanguage(language: Language) {
+    if (i18n.language === language) return;
     void i18n.changeLanguage(language);
-    window.history.pushState({}, '', `/${language}/${window.location.hash}`);
+    window.history.pushState({}, '', languagePath(language, window.location.hash));
     try {
       localStorage.setItem('bananov-rai-language', language);
     } catch {

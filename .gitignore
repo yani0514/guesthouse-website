@@ -10,7 +10,6 @@ coverage/
 # Local environment
 .env
 .env.*
-!.env.example
 
 # OpenAI Sites
 .openai/
@@ -45,8 +44,7 @@ docs/contact-sheet-*.jpg
 docs/screenshots/
 
 # Generated Lighthouse reports
-docs/audits/lighthouse-*.html
-docs/audits/lighthouse-summary.json
+docs/audits/
 
 # Playwright generated files
 playwright-report/

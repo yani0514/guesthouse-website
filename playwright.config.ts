@@ -1,4 +1,5 @@
 import { defineConfig } from '@playwright/test';
+import { localUrl } from './tests/deployment';
 
 export default defineConfig({
   testDir: './tests',
@@ -6,11 +7,12 @@ export default defineConfig({
   workers: 1,
   timeout: 30000,
   reporter: [['list'], ['html', { open: 'never' }]],
-  use: { baseURL: 'http://127.0.0.1:4173', headless: true, trace: 'retain-on-failure' },
+  use: { baseURL: localUrl, headless: true, trace: 'retain-on-failure' },
   projects: [{ name: 'chromium', use: { browserName: 'chromium' } }],
   webServer: {
-    command: 'npm run preview',
-    url: 'http://127.0.0.1:4173',
-    reuseExistingServer: true,
+    command: 'node scripts/serve-built.mjs',
+    env: { PORT: '4173' },
+    url: localUrl,
+    reuseExistingServer: false,
   },
 });

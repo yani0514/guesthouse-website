@@ -1,5 +1,7 @@
 import { chromium } from '@playwright/test';
 import { mkdir } from 'node:fs/promises';
+import { resolveConfig } from 'vite';
+const { base } = await resolveConfig({}, 'build');
 await mkdir('docs/screenshots', { recursive: true });
 const browser = await chromium.launch();
 for (const [language, width] of [
@@ -8,7 +10,7 @@ for (const [language, width] of [
   ['en', 1440],
 ]) {
   const page = await browser.newPage({ viewport: { width, height: 1000 }, deviceScaleFactor: 1 });
-  await page.goto(`http://127.0.0.1:4173/${language}/`);
+  await page.goto(`http://127.0.0.1:4174${base}${language}/`);
   await page.evaluate(() => document.fonts.ready);
   await page.locator('.hero img').evaluate((image) => image.decode());
   await page.screenshot({ path: `docs/screenshots/${language}-${width}-hero.png` });

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { updateSeo } from './lib/seo';
+import { pathLanguage } from './lib/urls';
 import { Hero } from './components/sections/Hero';
 import { About } from './components/sections/About';
 import { Accommodation } from './components/sections/Accommodation';
@@ -17,18 +18,8 @@ export default function App() {
     updateSeo(i18n.language === 'en' ? 'en' : 'bg');
   }, [i18n.language]);
   useEffect(() => {
-    if (window.location.pathname === '/') {
-      try {
-        if (localStorage.getItem('bananov-rai-language') === 'en') {
-          void i18n.changeLanguage('en');
-          window.history.replaceState({}, '', `/en/${window.location.hash}`);
-        }
-      } catch {
-        /* Optional preference. */
-      }
-    }
     const onPop = () => {
-      void i18n.changeLanguage(window.location.pathname.startsWith('/en') ? 'en' : 'bg');
+      void i18n.changeLanguage(pathLanguage(window.location.pathname));
     };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);

@@ -1,8 +1,9 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 import AxeBuilder from '@axe-core/playwright';
 import { readFileSync } from 'node:fs';
 import { property } from '../src/data/property';
 import { images, categories } from '../src/data/gallery';
+import { siteUrl, localUrl, publicUrl } from './deployment';
 
 test('Bulgarian facts, real assets and conditional contacts', async ({ page }) => {
   const errors: string[] = [];
@@ -11,7 +12,7 @@ test('Bulgarian facts, real assets and conditional contacts', async ({ page }) =
   page.on('response', (response) => {
     if (response.status() >= 400) failed.push(response.url());
   });
-  await page.goto('/');
+  await page.goto('./');
   await expect(page.locator('html')).toHaveAttribute('lang', 'bg');
   await expect(page.locator('h1')).toHaveText('Вашият рай край язовир Цонево');
   await expect(page.locator('.floor')).toHaveCount(3);
@@ -31,7 +32,7 @@ test('Bulgarian facts, real assets and conditional contacts', async ({ page }) =
   for (const id of ['home', 'about', 'accommodation', 'amenities', 'gallery', 'prices', 'contact'])
     await expect(page.locator(`#${id}`)).toHaveCount(1);
   for (const image of images) {
-    const response = await page.request.get(image.variants[0].webp);
+    const response = await page.request.get(publicUrl(image.variants[0].webp));
     expect(response.status()).toBe(200);
   }
   expect(errors).toEqual([]);
@@ -39,20 +40,17 @@ test('Bulgarian facts, real assets and conditional contacts', async ({ page }) =
 });
 
 test('language switch, persistence, history and localized metadata', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('./');
   await page.getByRole('button', { name: 'EN — English', exact: true }).click();
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await expect(page.locator('h1')).toContainText('Your little paradise');
   await expect(page).toHaveTitle('Bananov Rai | Guest House near Tsonevo Reservoir');
-  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
-    'href',
-    `${property.siteUrl}/en/`,
-  );
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', `${siteUrl}en/`);
   await expect(page.locator('meta[property="og:locale"]')).toHaveAttribute('content', 'en_GB');
   expect(await page.evaluate(() => localStorage.getItem('bananov-rai-language'))).toBe('en');
   await page.reload();
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-  await page.goto('/');
+  await page.goto('./');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await page.getByRole('button', { name: 'BG — Български', exact: true }).click();
   await expect(page.locator('html')).toHaveAttribute('lang', 'bg');
@@ -63,7 +61,7 @@ test('language switch, persistence, history and localized metadata', async ({ pa
 test('all gallery categories, lightbox navigation, trap, Escape and focus restoration', async ({
   page,
 }) => {
-  await page.goto('/en/');
+  await page.goto('en/');
   const labels = ['All', 'The house', 'Rooms', 'Mehana', 'Pool & garden', 'Amenities'];
   for (let index = 0; index < categories.length; index++) {
     await page
@@ -110,7 +108,7 @@ test('all gallery categories, lightbox navigation, trap, Escape and focus restor
 for (const width of [360, 390, 768, 1024, 1440]) {
   test(`responsive navigation and accessibility at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
-    await page.goto('/bg/');
+    await page.goto('bg/');
     await page.evaluate(() => document.fonts.ready);
     expect(
       await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
@@ -135,7 +133,7 @@ for (const width of [360, 390, 768, 1024, 1440]) {
       .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
       .analyze();
     expect(audit.violations).toEqual([]);
-    await page.goto('/en/');
+    await page.goto('en/');
     expect(
       await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
     ).toBe(true);
@@ -150,7 +148,7 @@ test('static translated content and metadata without JavaScript', async ({ brows
     ['bg', 'Вашият рай'],
     ['en', 'Your little paradise'],
   ]) {
-    await page.goto(`http://127.0.0.1:4173/${lang}/`);
+    await page.goto(`${localUrl}${lang}/`);
     await expect(page.locator('h1')).toContainText(text);
     await expect(page.locator('html')).toHaveAttribute('lang', lang);
     await expect(page.locator('link[hreflang="bg"]')).toHaveCount(1);
@@ -190,7 +188,7 @@ test('reduced motion and unavailable storage', async ({ browser }) => {
     });
   });
   const page = await context.newPage();
-  await page.goto('http://127.0.0.1:4173/bg/');
+  await page.goto(`${localUrl}bg/`);
   await page.getByRole('button', { name: 'EN — English', exact: true }).click();
   await expect(page.locator('h1')).toContainText('Your little paradise');
   expect(await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior)).toBe(

@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import type { PropertyImage } from '../../types/property';
+import { publicPath } from '../../lib/urls';
 
 export function Photo({
   image,
@@ -20,17 +21,17 @@ export function Photo({
     <picture className={`photo ${className}`}>
       <source
         type="image/avif"
-        srcSet={image.variants.map((v) => `${v.avif} ${v.width}w`).join(', ')}
+        srcSet={image.variants.map((v) => `${publicPath(v.avif)} ${v.width}w`).join(', ')}
         sizes={sizes}
       />
       <source
         type="image/webp"
-        srcSet={image.variants.map((v) => `${v.webp} ${v.width}w`).join(', ')}
+        srcSet={image.variants.map((v) => `${publicPath(v.webp)} ${v.width}w`).join(', ')}
         sizes={sizes}
       />
       <img
-        src={fallback.jpeg}
-        srcSet={image.variants.map((v) => `${v.jpeg} ${v.width}w`).join(', ')}
+        src={publicPath(fallback.jpeg)}
+        srcSet={image.variants.map((v) => `${publicPath(v.jpeg)} ${v.width}w`).join(', ')}
         sizes={sizes}
         alt={image.alt[i18n.language === 'en' ? 'en' : 'bg']}
         width={image.width}

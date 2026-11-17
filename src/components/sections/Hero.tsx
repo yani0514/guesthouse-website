@@ -1,7 +1,7 @@
 import { ArrowDown, ArrowUpRight, BedDouble, MapPin, Users, Waves } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Photo } from '../ui/Photo';
-import { getImage } from '../../data/gallery';
+import { getImage, heroSizes } from '../../data/gallery';
 import { property } from '../../data/property';
 
 export function Hero() {
@@ -48,7 +48,7 @@ export function Hero() {
           <Photo
             image={getImage('house-summer-balconies')}
             priority
-            sizes="(min-width: 1400px) 665px, (min-width: 800px) 53vw, calc(100vw - 40px)"
+            sizes={heroSizes}
             position="51% 50%"
           />
           <div className="photo-label">

@@ -1,88 +1,58 @@
-# Verification report — 17 November 2026
+# Verification report — GitHub Pages simplification
 
-## Delivered implementation
+Verified locally on 17 November 2026 using Node 22.23.5, Chromium 159.0.8154.6 and the production build.
 
-All seven milestones are implemented: repository/assets, design system, property presentation, amenities/gallery/pricing, contacts/localization/SEO, responsive polish and verification/deployment preparation. The remaining business data and performance target are explicitly documented below.
+## Result
 
-The site is a static React/TypeScript application with complete prerendered Bulgarian and English HTML. It uses only the 22 supplied photographs and an original SVG banana-leaf/wave identity. There is no booking engine, account system, payment flow or backend API.
+The website retains React, TypeScript, Vite, Tailwind, BG/EN static prerendering, the existing visual design and all 22 photographs. Deployment now uses the standard Vite base, one small URL helper and one official GitHub Pages workflow. No additional application or Python dependencies were introduced.
 
-## Build and code checks
+## Checks executed
 
-- `npm run build`: passed strict TypeScript, Vite client bundling, server-side prerender bundling and static language-page generation.
-- `npm run lint`: passed with no warnings or errors.
-- `npm run format:check`: passed.
-- `npm audit --omit=dev`: zero known production dependency vulnerabilities at verification time.
-- Main JavaScript: 277.46 kB (83.50 kB gzip); shared Photo/i18n chunk: 66.36 kB (22.19 kB gzip). Lightbox/Motion: 140.44 kB (47.22 kB gzip), loaded on interaction.
-- CSS: 25.71 kB (6.77 kB gzip). Fonts are served locally. No third-party application requests are required.
+- `npm ci`: passed; installed from the lockfile, audit reported zero vulnerabilities.
+- `npm run typecheck`: passed after removing the obsolete custom-domain test branch.
+- `npm run lint`: passed.
+- `npm run build`: passed client build, SSR build and localized static generation.
+- `npm test`: **19/19 passed**, including the original 11 tests.
+- `npm run format:check`: passed. `git diff --check`: passed.
+- Actual BG mobile/desktop screenshots were visually reviewed; the original typography, colors, layout and photographs are preserved.
 
-## Browser tests
+The strict local server mounts `dist/` at `/guesthouse-website/` and returns 404 for domain-root language/assets paths and unknown URLs. Tests run against port 4173; normal preview uses port 4174. This avoids a SPA fallback masking broken URLs.
 
-**11/11 Playwright tests passed**, Chromium 159.0.8154.6 on Windows, against the production build.
+## Browser and output coverage
 
-Covered:
+- Root, BG and EN Pages routes; default language, refresh, saved preference, back/forward and preserved section hashes.
+- Correct canonical, Open Graph, social image, hreflang, schema, sitemap and robots URLs; no previous Sites URL in production output.
+- Complete BG/EN content and metadata without JavaScript.
+- All **315 image variants** return HTTP 200, all emitted CSS/JS/fonts exist, and AVIF/WebP/JPEG decode successfully. The hero loads with a real natural width.
+- Desktop/mobile anchor navigation, disclosure menu, sticky layout and no horizontal overflow at 360, 390, 768, 1024 and 1440 px in both languages.
+- Every gallery category, modal navigation/wraparound, Tab trap, Escape and restored trigger focus.
+- Axe WCAG 2 A/AA, 2.1 A/AA and 2.2 AA coverage at five widths and inside the modal: no violations.
+- Console errors, page errors, failed resource responses and non-navigation request failures are checked across normal browser flows: none in the passing run.
+- Missing contact state, safe configured contact links, translation parity, provisional capacity, reduced motion and unavailable storage.
+- Output contains no source originals, environment files, development reports or old-host metadata.
 
-- Bulgarian default, English switching, explicit language URLs, saved preference, browser history and localized metadata.
-- Correct floor capacities, first-floor WC without a shower, indicative pricing and missing-contact handling.
-- Every gallery category and all 22 underlying image assets.
-- Modal opening, next/previous and wraparound navigation, Tab trapping, Escape/close controls and restored trigger focus.
-- Mobile-menu opening, closing, Escape and focus return; desktop/mobile anchor navigation.
-- No horizontal overflow at **360, 390, 768, 1024 and 1440 px**, in both languages.
-- Complete translated HTML and metadata with JavaScript disabled.
-- Reduced motion and disabled local storage.
-- Translation-key parity, capacity totals, unique source images and no upscaled responsive variants.
-- No page errors or failed resource responses in the checked initial flow.
+An expanded browser-health fixture exposed React hydration errors when a stored English preference changed deferred BG sections during hydration. The startup now uses the prerendered English URL before hydration; the regression tests pass without suppressing errors.
 
-The automated axe checks covered WCAG 2 A/AA, WCAG 2.1 A/AA and WCAG 2.2 AA at all five widths and inside the modal. **No violations were returned.** These automated checks are not a complete accessibility certification.
+## Removed and retained files
 
-## Visual review
+Removed the temporary, uncommitted `config/deployment.mjs`, `src/deployment.d.ts` and `.env.example`. Replaced `src/lib/deployment.ts` with the smaller `src/lib/urls.ts`; removed custom globals/environment settings and generated deployment JSON. Removed unused experimental font subset assets/script and their proposed dependencies. These were unnecessary for the single GitHub Pages target.
 
-Inspected actual rendered screenshots of the Bulgarian desktop/mobile hero and sections, plus the English desktop layout. Checked typography, genuine photograph placement, image cropping, price prominence and mobile stacking. Screenshots and numbered original-photo contact sheets are in `docs/` locally.
+Kept `src/entry-server.tsx`, `scripts/prerender.mjs`, the image manifest, photograph metadata, image optimization scripts and required source assets. All responsive image files remain. The compact manifest removes repeated path strings while reconstructing identical URLs.
 
-Issues found and fixed during verification:
+`.openai/hosting.json` was already removed from Git in `e78eb62`; its ignored local copy and existing Sites publication were not changed. `dist/`, `.prerender/`, `node_modules/`, screenshots and generated reports remain ignored.
 
-- Two small captions below the required text-contrast ratio.
-- Native-dialog Tab behaviour allowing focus to leave the controls; explicit wrapping now keeps it inside.
-- Accessible names that omitted the visible brand/language labels.
-- A CSS specificity conflict shrinking the price figures.
-- Initial font-import paths incompatible with the installed Fontsource release.
-- Tailwind scanning generated reports; source discovery is now limited to application files.
-- Long synchronous hydration work; separate Suspense boundaries allow section hydration to yield.
+## Performance
 
-## Image results
+Three fresh baseline/final mobile runs per language: median Performance **84 → 84 BG**, **83 → 83 EN**; Accessibility / Best Practices / SEO remain **100**. Final median LCP is **4.507 s BG / 4.660 s EN**. The 90+ target remains unmet; small timing differences are within likely measurement variation. No speed claim is based on the older 81/77 run.
 
-- **22 preserved originals**, 7,998,178 bytes total; 17 landscape and 5 portrait photographs.
-- All original orientations/dimensions inspected; no exact duplicate hashes.
-- **105 sizes per format, 315 files total:** AVIF, WebP and progressive JPEG; 44,943,658 bytes across all alternatives. A browser loads one appropriate format and size, not the whole collection.
-- Hero example: 768 px AVIF is **46,744 bytes**; 960 px WebP is 137,774 bytes. Actual format/width selection depends on viewport and pixel density.
-- No upscaling, invented property images, added foliage or colour grading.
-- Real exterior social image: 1200 × 630 JPEG.
-- See `docs/IMAGE_INVENTORY.md`, `docs/image-inventory.json` and `docs/image-processing-summary.json`.
+Main JavaScript: 259.76 kB (81.92 kB gzip), down from 277.46 kB (83.50 kB gzip). Lightbox/Motion remains lazy. Font and hero-preload experiments were not retained. See `docs/PERFORMANCE_COMPARISON.md` for all measurements, settings, bottlenecks and the browser transport limitation.
 
-## Lighthouse: measured results and limits
+## Deployment verification
 
-Final retained mobile run: **17 November 2026, 17:14 Europe/Paris**. Lighthouse 13.6.0, Chromium 159, isolated Node 22.23.5, Windows host. Default mobile simulation and simulated CPU/network throttling, against the built files on a local static server with Brotli/gzip support. Text compression is prepared before requests. This is a local lab test, not a measurement of the final hosted network or real guests.
+The repository's Pages API was checked before deployment work: source is already `workflow`, branch `main`, HTTPS enforced, target `https://yani0514.github.io/guesthouse-website/`. No repository setting or existing Sites deployment needed modification.
 
-| Metric                   | Bulgarian | English |
-| ------------------------ | --------: | ------: |
-| Performance              |    **81** |  **77** |
-| Accessibility            |   **100** | **100** |
-| Best practices           |   **100** | **100** |
-| SEO                      |   **100** | **100** |
-| First Contentful Paint   |     1.2 s |   3.0 s |
-| Largest Contentful Paint |     5.2 s |   4.8 s |
-| Total Blocking Time      |     10 ms |   80 ms |
-| Cumulative Layout Shift  |     0.037 |       0 |
+The new `.github/workflows/deploy.yml` is the single deployment workflow. It checks/install/builds/tests before uploading only `dist/`, and deploys through the `github-pages` environment with least-privilege permissions. Local checks do not by themselves establish publication: verify the [Actions deployment run](https://github.com/yani0514/guesthouse-website/actions/workflows/deploy.yml) and public URL after pushing. The final task response records the observed remote outcome.
 
-**The 90+ mobile performance target was not achieved.** AVIF, font preload, scoped CSS generation and section hydration improved specific costs, but the simulated largest-contentful paint remains slow. Further work should focus on critical-font/image delivery and reducing initial React/i18n work, then be measured on the intended public hosting. Results varied between runs; the table reports the final retained run, not the highest scores. Full reports and machine-readable metrics are saved locally in `docs/audits/`.
+## Remaining limits and owner information
 
-## Unverified or awaiting owner input
-
-- No phone, email, Viber number or exact address was supplied. The corresponding real-world actions cannot be verified and are not advertised with fabricated values.
-- Viber launching on physical devices remains unverified. Its public bot-link documentation does not establish personal-number compatibility on every platform. Verify the owner's link before enabling it; a phone alternative is implemented.
-- Capacity and price range are provisional; guest kitchen access and published house rules need confirmation.
-- Physical iOS/Android devices, Safari, Firefox and screen-reader interaction have not been tested in this run.
-- Public search indexing, production Core Web Vitals and CDN behaviour are not claimed. The initial Sites audience is owner-only.
-
-## Deployment handoff
-
-The deployable output is `dist/`, including `/bg/`, `/en/`, robots, sitemap, fonts and image assets. `.openai/hosting.json` records the existing private Site and static output. README includes local commands, content/image maintenance and generic static-host deployment instructions. The final chat response records the actual Sites publication result.
+Phone/email/Viber, exact address/Maps destination, final capacity and pricing, kitchen access and house rules still require owner input; no fabricated values are published. See `CONTENT_REQUIRED.md`. Actual call/email delivery and personal-number Viber behavior cannot be checked without those details. Safari, Firefox, physical devices and screen readers were not tested; automated checks are not complete accessibility certification. Field Core Web Vitals and public search indexing are not claimed.

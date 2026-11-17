@@ -4,8 +4,11 @@ import { createServer } from 'node:http';
 import { readFile, stat, readdir } from 'node:fs/promises';
 import { resolve, extname, sep } from 'node:path';
 import { brotliCompressSync, gzipSync } from 'node:zlib';
+import { resolveConfig } from 'vite';
 
 const root = resolve('dist');
+const { base } = await resolveConfig({}, 'build');
+const port = Number(process.env.PORT ?? 4174);
 const mime = {
   '.html': 'text/html; charset=utf-8',
   '.js': 'text/javascript',
@@ -31,12 +34,26 @@ for (const entry of await readdir(root, { recursive: true })) {
 createServer(async (request, response) => {
   try {
     const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
-    let file = resolve(root, `.${pathname}`);
+    if (base !== '/' && pathname === base.slice(0, -1)) {
+      response.writeHead(301, { Location: base }).end();
+      return;
+    }
+    if (!pathname.startsWith(base)) {
+      response.writeHead(404).end('Outside deployment base');
+      return;
+    }
+    let file = resolve(root, pathname.slice(base.length));
     if (file !== root && !file.startsWith(root + sep)) {
       response.writeHead(403).end();
       return;
     }
-    if ((await stat(file)).isDirectory()) file = resolve(file, 'index.html');
+    if ((await stat(file)).isDirectory()) {
+      if (!pathname.endsWith('/')) {
+        response.writeHead(301, { Location: `${pathname}/` }).end();
+        return;
+      }
+      file = resolve(file, 'index.html');
+    }
     const extension = extname(file);
     const encoding = /\.(html|js|css|json|svg|xml|txt)$/.test(file)
       ? request.headers['accept-encoding']?.includes('br')
@@ -68,6 +85,6 @@ createServer(async (request, response) => {
   } catch {
     response.writeHead(404, { 'Content-Type': 'text/plain' }).end('Not found');
   }
-}).listen(4174, '127.0.0.1', () =>
-  console.log('Compressed static audit server: http://127.0.0.1:4174'),
+}).listen(port, '127.0.0.1', () =>
+  console.log(`Compressed static server: http://127.0.0.1:${port}${base}`),
 );

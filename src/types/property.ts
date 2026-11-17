@@ -27,7 +27,6 @@ export interface GuestHouseConfig {
   nameEn: string;
   fullNameBg: string;
   fullNameEn: string;
-  siteUrl?: string;
   location: { region: string; landmark: string; address?: string; mapsDestination?: string };
   bananaTreeCountApprox: number;
   capacity: number;
